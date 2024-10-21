@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+    
+
+{% block body %}   <!-- Main Content -->
+<div class="container">
+    <!-- Post Section -->
+    <div class="post-section">
+        <!-- Create Post -->
+        <div class="create-post">
+            <textarea placeholder="What's on your mind?"></textarea>
+            <button>Post</button>
+        </div>
+
+        <!-- Feed -->
+        <div class="feed">
+            <img src="https://via.placeholder.com/600x300" alt="Post image">
+            <div class="post-content">
+                <p>This is a sample post by a student.</p>
+            </div>
+            <div class="actions">
+                <button>Like</button>
+                <button>Comment</button>
+                <button>Share</button>
+            </div>
+        </div>
+        <div class="feed">
+            <img src="https://via.placeholder.com/600x300" alt="Post image">
+            <div class="post-content">
+                <p>Another student's post example.</p>
+            </div>
+            <div class="actions">
+                <button>Like</button>
+                <button>Comment</button>
+                <button>Share</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html> {% endblock body %}
+    

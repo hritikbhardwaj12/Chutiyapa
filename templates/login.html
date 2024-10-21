@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chutiyapa Login</title>
+    <style>
+        body {
+            background-color: #fafafa;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .login-box {
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            padding: 40px;
+            width: 350px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .login-title {
+            font-family: 'Arial', sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            color: yellowgreen;
+            margin-bottom: 20px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+        .btn {
+            background-color: yellow;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn:disabled {
+            background-color: #b2dffc;
+        }
+        .or-divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .or-divider hr {
+            flex-grow: 1;
+            border: none;
+            border-top: 1px solid #dbdbdb;
+        }
+        .or-divider span {
+            margin: 0 10px;
+            color: #8e8e8e;
+            font-weight: bold;
+        }
+        .forgot-password {
+            margin-top: 20px;
+            color: #00376b;
+        }
+        .signup-box {
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            padding: 20px;
+            width: 350px;
+            text-align: center;
+        }
+        .signup-box a {
+            color: #0095f6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="login-title">Chutiyapa</div>
+            <input type="text" class="input-field" placeholder="Phone number, username, or email">
+            <input type="password" class="input-field" placeholder="Password">
+            <div class="btn">
+                <a href="/Home">login</a>
+            </div>
+
+           <div class="or-divider">
+                <hr>
+                <span>OR</span>
+                <hr>
+            </div>
+
+            <a href="/forgot_password" class="forgot_password">Forgot password?</a>
+        </div>
+       
+
+        <div class="signup-box">
+            Don't have an account? <a href="/Sign_up">Sign up</a>
+        </div>
+    </div>
+</body>
+</html>

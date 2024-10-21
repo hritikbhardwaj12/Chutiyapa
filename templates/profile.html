@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+{% block title %}profile{% endblock title %}
+
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .profile-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+        }
+        .upload-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .profile-info {
+            font-size: 18px;
+            color: #333;
+        }
+        .profile-info strong {
+            display: block;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        .custom-file-upload {
+            display: inline-block;
+            padding: 8px 15px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #eee;
+            color: #333;
+        }
+        .profile-info div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="profile-container">
+    <h2>User Profile</h2>
+
+    <!-- Profile photo section -->
+    <img id="profilePhoto" class="profile-photo" src="https://via.placeholder.com/150" alt="Profile Photo">
+
+    <!-- File upload button -->
+    <div class="upload-btn">
+        <label for="fileUpload" class="custom-file-upload">Upload Profile Photo</label>
+        <input type="file" id="fileUpload" accept="image/*" onchange="previewImage(event)">
+    </div>
+
+    <!-- Profile information -->
+    <div class="profile-info">
+        <strong>User</strong> <!-- Always shows 'User' as the username -->
+        <div id="genderDisplay">Gender: <span>Male</span></div>
+        <div id="branchDisplay">Branch: Electronics and Communication</div> <!-- Default branch (can be customized) -->
+        <div id="yearDisplay">Year: 3rd Year</div> <!-- Default year (can be customized) -->
+    </div>
+</div>
+
+<script>
+    // Function to preview the uploaded image
+    function previewImage(event) {
+        const reader = new FileReader();
+        reader.onload = function () {
+            const output = document.getElementById('profilePhoto');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+
+    // Customize the branch and year based on user input (replace this with actual data fetching in a real app)
+    const gender = "Male"; // Dynamically set this (can be "Male", "Female", etc.)
+    const branch = "Electronics and Communication"; // You can dynamically set this
+    const year = "3rd Year"; // You can dynamically set this
+
+    document.getElementById("genderDisplay").innerHTML = "Gender: <span>" + gender + "</span>";
+    document.getElementById("branchDisplay").textContent = "Branch: " + branch;
+    document.getElementById("yearDisplay").textContent = "Year: " + year;
+</script>
+
+</body>
+</html>  
+{% endblock body %}
+    
+      
+
+

@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block title %}Setting{% endblock title %}
+    
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .settings-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .settings-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .settings-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .settings-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .settings-item a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+        .settings-item:last-child {
+            border-bottom: none;
+        }
+        .settings-item:hover {
+            background-color: #f0f0f0;
+        }
+        .icon {
+            font-size: 18px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<div class="settings-container">
+    <div class="settings-header">
+        Settings
+    </div>
+    <ul class="settings-list">
+        <li class="settings-item">
+            <a href="#">Change Password</a>
+            <span class="icon">🔒</span>
+        </li>
+        <li class="settings-item">
+            <a href="#">Edit Profile</a>
+            <span class="icon">✏️</span>
+        </li>
+        <li class="settings-item">
+            <a href="#">Privacy Settings</a>
+            <span class="icon">🔒</span>
+        </li>
+        <li class="settings-item">
+            <a href="#">Notification Preferences</a>
+            <span class="icon">🔔</span>
+        </li>
+        <li class="settings-item">
+            <a href="#">Logout</a>
+            <span class="icon">🚪</span>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
+{% endblock body %}
+    
