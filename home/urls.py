@@ -11,6 +11,7 @@ urlpatterns = [
     path('setting',views.setting,name='setting.html'),
     path("forgot_password", views.forgot_password, name='forgot-password'),
     path("Home", views.Home, name='Home'),  # Keep only one 'Home' path
+    path("login", views.login, name='login'),
 
     
 ]

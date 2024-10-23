@@ -34,4 +34,6 @@ def profile(request):
     return render(request,'profile.html')
 def setting(request):
     return render(request,'setting.html')
+def login(request):    
+	return render(request,'login.html')
 
